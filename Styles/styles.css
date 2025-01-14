@@ -137,3 +137,32 @@ body {
     font-size: 0.8rem;
   }
 }
+
+.search-box-Shortcuts-help {
+  margin-top: 0.3rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+}
+
+.search-box-Shortcuts-help > div {
+  border: 1px solid var(--foreground);
+  padding: 0.2rem 0.5rem;
+  border-radius: 99px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+}
+
+.search-box-Shortcuts-help > div > a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.search-box-Shortcuts-help > div > span {
+  font-size: 0.7rem;
+}

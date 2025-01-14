@@ -15,6 +15,25 @@ const ITEM_CONTENT_CLASS = "search-box-result-item-content";
 const ITEM_TITLE_CLASS = "search-box-result-item-content-h2";
 const ITEM_SUBTITLE_CLASS = "search-box-result-item-content-p";
 
+const actionSelectingItem = (itemAction, itemData) => {
+  switch (itemAction) {
+    case "open":
+      window.open(itemData);
+      console.log(`Abrindo: ${itemData}`);
+      break;
+    case "copy":
+      navigator.clipboard.writeText(itemData);
+      console.log(`Copiado para a área de transferência: ${itemData}`);
+      break;
+    case "changeWallpaper":
+      container.style.backgroundImage = `url(/assets/wallpaper/${itemData})`;
+      window.localStorage.setItem("wallpaper", itemData);
+      break;
+    default:
+      console.warn("Ação desconhecida:", itemAction);
+  }
+};
+
 // Função genérica para criar elementos com classe e conteúdo
 const createElement = (tag, className, textContent = "") => {
   const element = document.createElement(tag);
@@ -28,6 +47,7 @@ export function createNewItem({ icon, title, subtitle, action, data }) {
   const searchBoxItem = createElement("div", ITEM_CLASS);
   searchBoxItem.dataset.data = data;
   searchBoxItem.dataset.action = action;
+  searchBoxItem.onclick = () => {actionSelectingItem(action, data)}
 
   const searchBoxIcon = createElement("div", ITEM_ICON_CLASS);
   const searchBoxIconSpan = createElement("span", ITEM_ICON_SPAN_CLASS, icon);
@@ -85,21 +105,5 @@ searchBoxForm.addEventListener("submit", (event) => {
   }
 
   const { data: itemData, action: itemAction } = selectedItem.dataset;
-
-  switch (itemAction) {
-    case "open":
-      window.open(itemData);
-      console.log(`Abrindo: ${itemData}`);
-      break;
-    case "copy":
-      navigator.clipboard.writeText(itemData);
-      console.log(`Copiado para a área de transferência: ${itemData}`);
-      break;
-    case "changeWallpaper":
-      container.style.backgroundImage = `url(/assets/wallpaper/${itemData})`;
-      window.localStorage.setItem("wallpaper", itemData);
-      break;
-    default:
-      console.warn("Ação desconhecida:", itemAction);
-  }
+  actionSelectingItem(itemAction, itemData);
 });

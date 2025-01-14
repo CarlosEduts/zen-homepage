@@ -150,35 +150,7 @@ Versão em inglês: [README_EN.md](/README_EN.md)
 
 ---
 
-## Como colaborar
+## Licença e Contribuição
 
-O projeto está separado em módulos JavaScript para facilitar a manutenção e expansão das funcionalidades:
-
-- **script.js:** Código principal que importa e gerencia os módulos.
-- **\_\*\_tool.js:** Scripts dedicados às ferramentas de busca e funcionalidades específicas.
-
-### Passos para colaborar:
-
-1. Faça um **fork** do projeto.
-2. Adicione suas funcionalidades no formato de um módulo separado (ex.: `minha_tool.js`).
-3. Atualize o `script.js` para integrar seu módulo.
-4. Adicione informações detalhadas sobre o novo atalho ou funcionalidade na documentação.
-5. Envie um **pull request** com suas alterações.
-
----
-
-## Estrutura do Projeto
-
-- **script.js:** Arquivo principal que integra todos os módulos.
-- **create_new_item.js:** Gerenciador de criação de itens exibidos na interface.
-- **[nome]\_\_tool.js:** Scripts para funcionalidades específicas (ex.: `conversion_tool.js`, `favorites_tool.js`).
-- **assets/**: Diretório para recursos como ícones e wallpapers.
-- **styles/**: Diretório com os estilos CSS utilizados na interface.
-
----
-
-## Padrões e Convenções
-
-- **Entrada e Saída**: Todas as interações são baseadas em strings com formatos predefinidos para garantir consistência.
-- **Interface de Usuário**: Cada função usa `createNewItem` para exibir os resultados e mensagens relevantes.
-- **Validação de Dados**: Expressões regulares (“regex”) são usadas extensivamente para garantir que as entradas estejam no formato esperado.
+- Licença: [LICENSE](./LICENSE)
+- Contribuição: [CONTRIBUTING](./CONTRIBUTING.md)

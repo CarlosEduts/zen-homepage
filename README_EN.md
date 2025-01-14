@@ -148,39 +148,7 @@
 
 ---
 
-## How to Contribute
+## License and Contribution
 
-The project is divided into JavaScript modules for easy maintenance and expansion of features:
-
-- **script.js:** Main code that imports and manages the modules.
-- **\_\*\_tool.js:** Scripts dedicated to search tools and specific functionalities.
-
-### Steps to Contribute:
-
-1. Fork the project.
-
-2. Add your features as a separate module (e.g., `my_tool.js`).
-
-3. Update `script.js` to integrate your module.
-
-4. Add detailed information about the new shortcut or feature in the documentation.
-
-5. Submit a pull request with your changes.
-
----
-
-## Project Structure
-
-- **script.js:** Main file that integrates all modules.
-- **create_new_item.js:** Manages the creation of items displayed in the interface.
-- **[name]\_\_tool.js:** Scripts for specific functionalities (e.g., `conversion_tool.js`, `favorites_tool.js`).
-- **assets/**: Directory for resources such as icons and wallpapers.
-- **styles/**: Directory containing the CSS styles used in the interface.
-
----
-
-## Standards and Conventions
-
-- **Input and Output**: All interactions are based on strings with predefined formats to ensure consistency.
-- **User Interface**: Each function uses `createNewItem` to display results and relevant messages.
-- **Data Validation**: Regular expressions (“regex”) are extensively used to ensure inputs are in the expected format.
+- License: [LICENSE](./LICENSE)
+- Contribution: [CONTRIBUTING](./CONTRIBUTING.md)
