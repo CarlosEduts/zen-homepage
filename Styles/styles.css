@@ -30,7 +30,7 @@ body {
 
 .search-box {
   width: 100%;
-  height: calc(100dvh - 300px);
+  height: calc(100dvh - 250px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +84,7 @@ body {
   background-color: var(--background);
   margin-top: 0.5rem;
   display: none;
-  max-height: 500px;
+  max-height: 320px;
   width: 100%;
   max-width: 600px;
   border: 1px solid var(--foreground);
@@ -93,6 +93,19 @@ body {
   overflow-x: hidden;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+
+.search-box-result::-webkit-scrollbar {
+  width: 2px;
+  height: 10px;
+}
+
+.search-box-result::-webkit-scrollbar-track {
+  background: none;
+}
+
+.search-box-result::-webkit-scrollbar-thumb {
+  background: none;
 }
 
 .search-box-result-item {
