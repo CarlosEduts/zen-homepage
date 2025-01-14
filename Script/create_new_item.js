@@ -4,7 +4,7 @@ const searchBoxResult = document.querySelector(".search-box-result");
 // Seleção do container para troca de papel de parede
 const container = document.querySelector(".container");
 const localStorageWallpaper =
-  window.localStorage.getItem("wallpaper") || "wp_6.jpg";
+  window.localStorage.getItem("wallpaper") || "clouds.jpg";
 container.style.backgroundImage = `url(/assets/wallpaper/${localStorageWallpaper})`;
 
 // Constantes para classes
@@ -47,7 +47,9 @@ export function createNewItem({ icon, title, subtitle, action, data }) {
   const searchBoxItem = createElement("div", ITEM_CLASS);
   searchBoxItem.dataset.data = data;
   searchBoxItem.dataset.action = action;
-  searchBoxItem.onclick = () => {actionSelectingItem(action, data)}
+  searchBoxItem.onclick = () => {
+    actionSelectingItem(action, data);
+  };
 
   const searchBoxIcon = createElement("div", ITEM_ICON_CLASS);
   const searchBoxIconSpan = createElement("span", ITEM_ICON_SPAN_CLASS, icon);

@@ -131,6 +131,7 @@ Versão em inglês: [README_EN.md](/README_EN.md)
 - **changeWPTool**: Exibe a lista de wallpapers disponíveis e permite trocar.
   - Entrada: String `wp change`.
   - Saída: Lista de wallpapers com a opção de trocar ao pressionar Enter.
+  - Papéis de parede obtidos de [https://pixabay.com/](https://pixabay.com/)
 
 ---
 

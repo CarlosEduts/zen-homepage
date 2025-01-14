@@ -129,6 +129,7 @@
 - **changeWPTool**: Displays the list of available wallpapers and allows changing.
   - Input: String `wp change`.
   - Output: List of wallpapers with the option to change by pressing Enter.
+  - Wallpapers sourced from [https://pixabay.com/"](https://pixabay.com/)
 
 ---
 
